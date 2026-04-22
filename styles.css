@@ -241,6 +241,7 @@ h1, h2, h3, h4 { color: var(--text); }
 
 /* ---- SECTIONS ---- */
 .approach { padding: var(--section-pad) 0; }
+.approach--alt { background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 .story { padding: var(--section-pad) 0; background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 
 /* ---- SPLIT LAYOUT ---- */
