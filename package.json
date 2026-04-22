@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "description": "Hale & Associates website",
   "scripts": {
-    "start": "npx serve -s . -l $PORT"
+    "start": "npx serve . -l $PORT"
   }
 }
