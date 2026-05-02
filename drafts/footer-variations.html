@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer Alignment Variations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --green: #228244;
+      --font-sans: 'Jost', sans-serif;
+      --font-serif: 'Lora', Georgia, serif;
+      --max-width: 1140px;
+    }
+    body {
+      font-family: var(--font-sans);
+      background: #1a1a1a;
+      color: #9B958A;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; height: auto; display: block; }
+
+    /* Variation label */
+    .variation-label {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 40px 32px 16px;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #fff;
+      font-family: var(--font-sans);
+      border-top: 2px solid #333;
+    }
+    .variation-label:first-child { border-top: none; }
+    .variation-label span {
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: #888;
+      display: block;
+      margin-top: 6px;
+    }
+
+    /* Shared footer styles */
+    .footer {
+      background: #2B2B2B;
+      color: #9B958A;
+      margin-bottom: 60px;
+    }
+    .footer__strip {
+      height: 4px;
+      background: linear-gradient(90deg, #1A6634 0%, #228244 30%, #2a9e54 50%, #228244 70%, #1A6634 100%);
+    }
+    .footer__heading {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #c5c0b8;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .footer__nav {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .footer__nav a {
+      font-size: 0.9rem;
+      color: #9B958A;
+      transition: color 0.2s;
+    }
+    .footer__nav a:hover { color: var(--green); }
+    .footer__social {
+      display: flex;
+      gap: 12px;
+    }
+    .footer__social a {
+      display: flex;
+      align-items: center;
+      color: #9B958A;
+      transition: color 0.2s;
+    }
+    .footer__social a:hover { color: var(--green); }
+    .footer__social svg { width: 18px; height: 18px; }
+    .footer__contact-value {
+      font-size: 0.88rem;
+      color: #c5c0b8;
+      line-height: 1.3;
+      transition: color 0.2s;
+      display: block;
+    }
+    a.footer__contact-value:hover { color: var(--green); }
+    .footer__copyright {
+      font-size: 0.72rem;
+      color: #6B665C;
+    }
+    .footer__legal {
+      display: flex;
+      gap: 20px;
+    }
+    .footer__legal a {
+      font-size: 0.72rem;
+      color: #6B665C;
+      transition: color 0.2s;
+    }
+    .footer__legal a:hover { color: var(--green); }
+    .bbb-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 6px;
+      padding: 8px 14px;
+      transition: border-color 0.2s;
+    }
+    .bbb-badge:hover { border-color: rgba(255,255,255,0.18); }
+    .bbb-badge__icon { width: 28px; height: 28px; flex-shrink: 0; }
+    .bbb-badge__text {
+      font-size: 0.68rem;
+      color: #6B665C;
+      line-height: 1.3;
+      text-align: left;
+    }
+    .bbb-badge__text strong {
+      display: block;
+      color: #c5c0b8;
+      font-size: 0.72rem;
+      font-weight: 600;
+    }
+    .footer__brand img,
+    .footer__logo img {
+      height: 28px;
+      width: auto;
+      opacity: 0.85;
+    }
+
+    /* =============================================
+       VARIATION A — Right-aligned nav columns
+       ============================================= */
+    .footer--a .footer__main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 56px 32px 48px;
+    }
+    .footer--a .footer__grid {
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      gap: 80px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .footer--a .footer__brand {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .footer--a .footer__contact {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .footer--a .footer__bottom {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 24px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer--a .footer__bottom-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    /* =============================================
+       VARIATION B — Centered 4-column layout
+       ============================================= */
+    .footer--b .footer__main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 56px 32px 48px;
+    }
+    .footer--b .footer__grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .footer--b .footer__brand {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .footer--b .footer__contact {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .footer--b .footer__bottom {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 24px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer--b .footer__bottom-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    /* =============================================
+       VARIATION C — Compact single-row with right cluster
+       ============================================= */
+    .footer--c .footer__main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 56px 32px 48px;
+    }
+    .footer--c .footer__grid {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .footer--c .footer__brand {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 280px;
+    }
+    .footer--c .footer__brand p {
+      font-size: 0.85rem;
+      color: #6B665C;
+      line-height: 1.6;
+    }
+    .footer--c .footer__right-cluster {
+      display: flex;
+      gap: 80px;
+    }
+    .footer--c .footer__contact-col {
+      display: flex;
+      flex-direction: column;
+    }
+    .footer--c .footer__contact {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .footer--c .footer__bottom {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 24px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer--c .footer__bottom-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ==================== VARIATION A ==================== -->
+<div class="variation-label">
+  Variation A — Right-Aligned Nav
+  <span>Brand/contact anchored left, Company nav pushed right. Clean two-zone split with generous whitespace.</span>
+</div>
+
+<footer class="footer footer--a">
+  <div class="footer__strip"></div>
+  <div class="footer__main">
+    <div class="footer__grid">
+
+      <!-- Left: Brand + Contact + Social -->
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <img src="../assets/logo-wordmark.png" alt="Hale & Associates" />
+        </div>
+        <div class="footer__contact">
+          <a href="tel:3176777178" class="footer__contact-value">317.677.7178</a>
+          <a href="mailto:info@haleandassociates.net" class="footer__contact-value">info@haleandassociates.net</a>
+        </div>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 100-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 11-2.88 0 1.441 1.441 0 012.88 0z"/></svg></a>
+        </div>
+      </div>
+
+      <!-- Right: Navigation -->
+      <div class="footer__nav-col">
+        <h4 class="footer__heading">Company</h4>
+        <nav class="footer__nav">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Locations</a>
+        </nav>
+      </div>
+
+      <!-- Right: Resources -->
+      <div class="footer__nav-col">
+        <h4 class="footer__heading">Resources</h4>
+        <nav class="footer__nav">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms &amp; Conditions</a>
+        </nav>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="footer__bottom-left">
+      <a href="#" class="bbb-badge">
+        <svg class="bbb-badge__icon" viewBox="0 0 64 64" fill="none">
+          <rect x="2" y="2" width="60" height="60" rx="6" fill="#005A8C" stroke="#0073B1" stroke-width="2"/>
+          <text x="32" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#fff">BBB</text>
+          <rect x="16" y="36" width="32" height="18" rx="3" fill="#228244"/>
+          <text x="32" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#fff">A+</text>
+        </svg>
+        <span class="bbb-badge__text"><strong>BBB A+ Rated</strong>Accredited Business</span>
+      </a>
+      <span class="footer__copyright">&copy; 2026 Hale and Associates, LLC. All rights reserved. CA LIC #0G30788</span>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ==================== VARIATION B ==================== -->
+<div class="variation-label">
+  Variation B — Four-Column Grid
+  <span>Brand left, then Contact, Company, and Resources columns spread evenly. Classic corporate footer feel.</span>
+</div>
+
+<footer class="footer footer--b">
+  <div class="footer__strip"></div>
+  <div class="footer__main">
+    <div class="footer__grid">
+
+      <!-- Col 1: Brand -->
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <img src="../assets/logo-wordmark.png" alt="Hale & Associates" />
+        </div>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 100-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 11-2.88 0 1.441 1.441 0 012.88 0z"/></svg></a>
+        </div>
+      </div>
+
+      <!-- Col 2: Contact -->
+      <div class="footer__nav-col">
+        <h4 class="footer__heading">Contact</h4>
+        <div class="footer__contact">
+          <a href="tel:3176777178" class="footer__contact-value">317.677.7178</a>
+          <a href="mailto:info@haleandassociates.net" class="footer__contact-value">info@haleandassociates.net</a>
+        </div>
+      </div>
+
+      <!-- Col 3: Company -->
+      <div class="footer__nav-col">
+        <h4 class="footer__heading">Company</h4>
+        <nav class="footer__nav">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Locations</a>
+        </nav>
+      </div>
+
+      <!-- Col 4: Legal -->
+      <div class="footer__nav-col">
+        <h4 class="footer__heading">Legal</h4>
+        <nav class="footer__nav">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms &amp; Conditions</a>
+        </nav>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="footer__bottom-left">
+      <a href="#" class="bbb-badge">
+        <svg class="bbb-badge__icon" viewBox="0 0 64 64" fill="none">
+          <rect x="2" y="2" width="60" height="60" rx="6" fill="#005A8C" stroke="#0073B1" stroke-width="2"/>
+          <text x="32" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#fff">BBB</text>
+          <rect x="16" y="36" width="32" height="18" rx="3" fill="#228244"/>
+          <text x="32" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#fff">A+</text>
+        </svg>
+        <span class="bbb-badge__text"><strong>BBB A+ Rated</strong>Accredited Business</span>
+      </a>
+      <span class="footer__copyright">&copy; 2026 Hale and Associates, LLC. All rights reserved. CA LIC #0G30788</span>
+    </div>
+    <div class="footer__legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms &amp; Conditions</a>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ==================== VARIATION C ==================== -->
+<div class="variation-label">
+  Variation C — Brand + Tagline Left, Compact Right Cluster
+  <span>Logo with brief tagline on the left, nav and contact grouped tightly on the right. Minimal and modern.</span>
+</div>
+
+<footer class="footer footer--c">
+  <div class="footer__strip"></div>
+  <div class="footer__main">
+    <div class="footer__grid">
+
+      <!-- Left: Brand + tagline -->
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <img src="../assets/logo-wordmark.png" alt="Hale & Associates" />
+        </div>
+        <p>Independent retirement planning advice. Family-owned for 40+ years.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 100-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 11-2.88 0 1.441 1.441 0 012.88 0z"/></svg></a>
+        </div>
+      </div>
+
+      <!-- Right cluster -->
+      <div class="footer__right-cluster">
+        <!-- Contact -->
+        <div class="footer__contact-col">
+          <h4 class="footer__heading">Contact</h4>
+          <div class="footer__contact">
+            <a href="tel:3176777178" class="footer__contact-value">317.677.7178</a>
+            <a href="mailto:info@haleandassociates.net" class="footer__contact-value">info@haleandassociates.net</a>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="footer__nav-col">
+          <h4 class="footer__heading">Company</h4>
+          <nav class="footer__nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Locations</a>
+          </nav>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="footer__bottom-left">
+      <a href="#" class="bbb-badge">
+        <svg class="bbb-badge__icon" viewBox="0 0 64 64" fill="none">
+          <rect x="2" y="2" width="60" height="60" rx="6" fill="#005A8C" stroke="#0073B1" stroke-width="2"/>
+          <text x="32" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#fff">BBB</text>
+          <rect x="16" y="36" width="32" height="18" rx="3" fill="#228244"/>
+          <text x="32" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#fff">A+</text>
+        </svg>
+        <span class="bbb-badge__text"><strong>BBB A+ Rated</strong>Accredited Business</span>
+      </a>
+      <span class="footer__copyright">&copy; 2026 Hale and Associates, LLC. All rights reserved. CA LIC #0G30788</span>
+    </div>
+    <div class="footer__legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms &amp; Conditions</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

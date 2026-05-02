@@ -1,3 +1,16 @@
 .DS_Store
 *.DS_Store
 Thumbs.db
+
+# Secrets
+.env
+assets/.env
+
+# Dependencies
+node_modules/
+
+# Large video files
+assets/videos/
+
+# Claude Code
+.claude/

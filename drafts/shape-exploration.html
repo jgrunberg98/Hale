@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hale &amp; Associates — Shape Exploration</title>
+  <link rel="icon" type="image/jpeg" href="../assets/logo-square.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Jost', Arial, sans-serif;
+      background: #e0e0e0;
+      color: #2B2B2B;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      width: 816px;
+      min-height: 1056px;
+      background: #FFFFFF;
+      margin: 40px auto;
+      padding: 56px 64px;
+      box-shadow: 0 2px 24px rgba(0,0,0,0.10);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .eyebrow {
+      font-weight: 500;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #228244;
+      margin-bottom: 8px;
+    }
+
+    .page-title {
+      font-weight: 300;
+      font-size: 1.8rem;
+      color: #2B2B2B;
+      margin-bottom: 8px;
+    }
+
+    .page-intro {
+      font-size: 0.9rem;
+      color: #6B6B6B;
+      line-height: 1.6;
+      margin-bottom: 36px;
+      max-width: 580px;
+    }
+
+    .option-label {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(255,255,255,0.92);
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 8px 14px;
+      z-index: 10;
+    }
+    .option-label .num {
+      font-weight: 600;
+      font-size: 0.72rem;
+      color: #228244;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .option-label .name {
+      font-weight: 500;
+      font-size: 0.88rem;
+      color: #2B2B2B;
+    }
+    .option-label .desc {
+      font-size: 0.72rem;
+      color: #6B6B6B;
+      margin-top: 2px;
+      max-width: 260px;
+      line-height: 1.4;
+    }
+
+    /* Simulated document elements */
+    .doc-logo { height: 32px; margin-bottom: 16px; }
+    .doc-headline {
+      font-family: 'Lora', Georgia, serif;
+      font-weight: 500;
+      font-size: 1.4rem;
+      color: #228244;
+      margin-bottom: 8px;
+      max-width: 420px;
+      line-height: 1.35;
+    }
+    .doc-subhead {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #2B2B2B;
+      margin-bottom: 4px;
+    }
+    .doc-body {
+      font-size: 0.82rem;
+      color: #6B6B6B;
+      line-height: 1.6;
+      max-width: 460px;
+    }
+    .doc-cta {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 12px 32px;
+      background: #228244;
+      color: #fff;
+      font-family: 'Jost', Arial, sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      border-radius: 50px;
+      letter-spacing: 0.04em;
+    }
+    .doc-footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #2B2B2B;
+      padding: 16px 32px;
+      text-align: center;
+      font-size: 0.75rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     INTRO PAGE
+     ═══════════════════════════════════════════ -->
+<section class="page">
+  <div class="eyebrow">Shape Exploration</div>
+  <h1 class="page-title">Background Shapes</h1>
+  <p class="page-intro">
+    Large, decorative shapes that fill the background of documents — flyers, one-pagers, slides, and printouts. These give a blank page visual presence before any content is added. Each option below is shown as a full mock document so you can see how content sits on top.
+  </p>
+  <p class="page-intro" style="margin-top:-20px;">
+    All shapes use brand greens at low opacity so they don't compete with the content. The goal: when someone picks up a Hale document, it looks designed and intentional, not like a Word template.
+  </p>
+
+  <div style="margin-top:40px;">
+    <div style="font-weight:600; font-size:0.95rem; margin-bottom:12px;">What follows:</div>
+    <div style="font-size:0.88rem; color:#6B6B6B; line-height:2;">
+      <strong style="color:#228244;">1</strong> — Sweeping ribbon curves (inspired by the logo's flowing form)<br>
+      <strong style="color:#228244;">2</strong> — Broad gradient wave, top-right corner<br>
+      <strong style="color:#228244;">3</strong> — Layered arcs — concentric curves radiating from a corner<br>
+      <strong style="color:#228244;">4</strong> — Single bold swoosh across the page<br>
+      <strong style="color:#228244;">5</strong> — Soft gradient blobs — organic, modern<br>
+      <strong style="color:#228244;">6</strong> — Minimal — thin flowing lines only
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     OPTION 1: SWEEPING RIBBON CURVES
+     ═══════════════════════════════════════════ -->
+<section class="page" style="padding:0; background:#FAF8F5;">
+  <div class="option-label">
+    <div class="num">Option 1</div>
+    <div class="name">Sweeping Ribbon Curves</div>
+    <div class="desc">Multiple flowing curves sweeping from top-right to bottom-left, like ribbons. Echoes the logo's wave form. Most expressive option.</div>
+  </div>
+
+  <!-- Background shapes -->
+  <svg viewBox="0 0 816 1056" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute; top:0; left:0; width:100%; height:100%;">
+    <!-- Main ribbon -->
+    <path d="M816 0 Q700 200 650 400 Q580 650 500 800 Q450 900 816 1056" fill="none" stroke="#228244" stroke-width="120" opacity="0.045"/>
+    <!-- Second ribbon -->
+    <path d="M816 80 Q750 250 720 450 Q670 680 620 850 Q580 960 816 1056" fill="none" stroke="#228244" stroke-width="80" opacity="0.035"/>
+    <!-- Third ribbon, lighter -->
+    <path d="M816 200 Q780 350 770 500 Q740 700 700 870 Q670 980 750 1056" fill="none" stroke="#228244" stroke-width="50" opacity="0.025"/>
+    <!-- Subtle warm accent -->
+    <path d="M0 900 Q200 800 400 850 Q600 900 700 1056 L0 1056 Z" fill="#228244" opacity="0.015"/>
+  </svg>
+
+  <!-- Document content -->
+  <div style="position:relative; z-index:1; padding:80px 64px;">
+    <img src="../assets/brand-book/Hale Logo Green.png" alt="Hale" class="doc-logo">
+    <div class="doc-headline">Are You Getting the Most From Your Retirement Benefits?</div>
+    <div class="doc-body" style="margin-top:12px; margin-bottom:24px;">
+      Personalized retirement planning for Teamsters Local 294 retirees. Schedule a complimentary review of your pension, Social Security timing, and savings.
+    </div>
+    <div class="doc-subhead" style="margin-top:32px;">What We Offer</div>
+    <div class="doc-body">A no-cost, no-pressure review of your full retirement picture — so you know exactly where you stand and what your options are.</div>
+    <div class="doc-cta">Book a Call</div>
+  </div>
+  <div class="doc-footer">Hale &amp; Associates · 516.313.6413 · Family-owned since 1983 · Independent · BBB A+ Rated</div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     OPTION 2: BROAD GRADIENT WAVE, CORNER
+     ═══════════════════════════════════════════ -->
+<section class="page" style="padding:0; background:#FAF8F5;">
+  <div class="option-label">
+    <div class="num">Option 2</div>
+    <div class="name">Corner Gradient Wave</div>
+    <div class="desc">A large, soft wave shape anchored in the top-right corner. Fills roughly a third of the page. Feels substantial but stays out of the content area.</div>
+  </div>
+
+  <!-- Background shape -->
+  <svg viewBox="0 0 816 1056" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute; top:0; left:0; width:100%; height:100%;">
+    <defs>
+      <linearGradient id="g2" x1="816" y1="0" x2="300" y2="600" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#228244" stop-opacity="0.09"/>
+        <stop offset="1" stop-color="#228244" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <path d="M500 0 Q450 150 480 300 Q520 500 816 550 L816 0 Z" fill="url(#g2)"/>
+    <!-- Subtle second layer -->
+    <path d="M600 0 Q560 100 580 220 Q620 380 816 420 L816 0 Z" fill="#228244" opacity="0.03"/>
+  </svg>
+
+  <!-- Document content -->
+  <div style="position:relative; z-index:1; padding:80px 64px;">
+    <img src="../assets/brand-book/Hale Logo Green.png" alt="Hale" class="doc-logo">
+    <div class="doc-headline">Are You Getting the Most From Your Retirement Benefits?</div>
+    <div class="doc-body" style="margin-top:12px; margin-bottom:24px;">
+      Personalized retirement planning for Teamsters Local 294 retirees. Schedule a complimentary review of your pension, Social Security timing, and savings.
+    </div>
+    <div class="doc-subhead" style="margin-top:32px;">What We Offer</div>
+    <div class="doc-body">A no-cost, no-pressure review of your full retirement picture — so you know exactly where you stand and what your options are.</div>
+    <div class="doc-cta">Book a Call</div>
+  </div>
+  <div class="doc-footer">Hale &amp; Associates · 516.313.6413 · Family-owned since 1983 · Independent · BBB A+ Rated</div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     OPTION 3: LAYERED CONCENTRIC ARCS
+     ═══════════════════════════════════════════ -->
+<section class="page" style="padding:0; background:#FAF8F5;">
+  <div class="option-label">
+    <div class="num">Option 3</div>
+    <div class="name">Layered Concentric Arcs</div>
+    <div class="desc">Large quarter-circle arcs radiating from the bottom-right corner. Each layer slightly lighter. Structured and geometric — very common in financial/insurance materials.</div>
+  </div>
+
+  <!-- Background shapes -->
+  <svg viewBox="0 0 816 1056" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute; top:0; left:0; width:100%; height:100%;">
+    <circle cx="816" cy="1056" r="700" fill="#228244" opacity="0.025"/>
+    <circle cx="816" cy="1056" r="550" fill="#228244" opacity="0.025"/>
+    <circle cx="816" cy="1056" r="400" fill="#228244" opacity="0.025"/>
+    <circle cx="816" cy="1056" r="250" fill="#228244" opacity="0.02"/>
+  </svg>
+
+  <!-- Document content -->
+  <div style="position:relative; z-index:1; padding:80px 64px;">
+    <img src="../assets/brand-book/Hale Logo Green.png" alt="Hale" class="doc-logo">
+    <div class="doc-headline">Are You Getting the Most From Your Retirement Benefits?</div>
+    <div class="doc-body" style="margin-top:12px; margin-bottom:24px;">
+      Personalized retirement planning for Teamsters Local 294 retirees. Schedule a complimentary review of your pension, Social Security timing, and savings.
+    </div>
+    <div class="doc-subhead" style="margin-top:32px;">What We Offer</div>
+    <div class="doc-body">A no-cost, no-pressure review of your full retirement picture — so you know exactly where you stand and what your options are.</div>
+    <div class="doc-cta">Book a Call</div>
+  </div>
+  <div class="doc-footer">Hale &amp; Associates · 516.313.6413 · Family-owned since 1983 · Independent · BBB A+ Rated</div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     OPTION 4: SINGLE BOLD SWOOSH
+     ═══════════════════════════════════════════ -->
+<section class="page" style="padding:0; background:#FAF8F5;">
+  <div class="option-label">
+    <div class="num">Option 4</div>
+    <div class="name">Single Bold Swoosh</div>
+    <div class="desc">One thick, confident curve sweeping diagonally across the page. Simple and bold — easy to reproduce in any tool. More modern/corporate feel.</div>
+  </div>
+
+  <!-- Background shape -->
+  <svg viewBox="0 0 816 1056" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute; top:0; left:0; width:100%; height:100%;">
+    <defs>
+      <linearGradient id="g4" x1="0" y1="400" x2="816" y2="800" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#228244" stop-opacity="0.06"/>
+        <stop offset="1" stop-color="#228244" stop-opacity="0.02"/>
+      </linearGradient>
+    </defs>
+    <path d="M-100 600 Q200 450 500 500 Q700 530 816 350 L816 650 Q700 820 500 780 Q200 730 -100 880 Z" fill="url(#g4)"/>
+  </svg>
+
+  <!-- Document content -->
+  <div style="position:relative; z-index:1; padding:80px 64px;">
+    <img src="../assets/brand-book/Hale Logo Green.png" alt="Hale" class="doc-logo">
+    <div class="doc-headline">Are You Getting the Most From Your Retirement Benefits?</div>
+    <div class="doc-body" style="margin-top:12px; margin-bottom:24px;">
+      Personalized retirement planning for Teamsters Local 294 retirees. Schedule a complimentary review of your pension, Social Security timing, and savings.
+    </div>
+    <div class="doc-subhead" style="margin-top:32px;">What We Offer</div>
+    <div class="doc-body">A no-cost, no-pressure review of your full retirement picture — so you know exactly where you stand and what your options are.</div>
+    <div class="doc-cta">Book a Call</div>
+  </div>
+  <div class="doc-footer">Hale &amp; Associates · 516.313.6413 · Family-owned since 1983 · Independent · BBB A+ Rated</div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     OPTION 5: SOFT GRADIENT BLOBS
+     ═══════════════════════════════════════════ -->
+<section class="page" style="padding:0; background:#FAF8F5;">
+  <div class="option-label">
+    <div class="num">Option 5</div>
+    <div class="name">Soft Gradient Blobs</div>
+    <div class="desc">Organic, cloud-like shapes with soft edges. More contemporary and warm. Think soft bokeh or out-of-focus light. Less geometric than the other options.</div>
+  </div>
+
+  <!-- Background shapes -->
+  <svg viewBox="0 0 816 1056" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute; top:0; left:0; width:100%; height:100%;">
+    <defs>
+      <filter id="blur5" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="60"/>
+      </filter>
+    </defs>
+    <!-- Top right blob -->
+    <ellipse cx="700" cy="150" rx="250" ry="200" fill="#228244" opacity="0.055" filter="url(#blur5)"/>
+    <!-- Bottom left blob -->
+    <ellipse cx="120" cy="850" rx="220" ry="180" fill="#228244" opacity="0.04" filter="url(#blur5)"/>
+    <!-- Small accent blob -->
+    <ellipse cx="650" cy="700" rx="140" ry="120" fill="#228244" opacity="0.03" filter="url(#blur5)"/>
+  </svg>
+
+  <!-- Document content -->
+  <div style="position:relative; z-index:1; padding:80px 64px;">
+    <img src="../assets/brand-book/Hale Logo Green.png" alt="Hale" class="doc-logo">
+    <div class="doc-headline">Are You Getting the Most From Your Retirement Benefits?</div>
+    <div class="doc-body" style="margin-top:12px; margin-bottom:24px;">
+      Personalized retirement planning for Teamsters Local 294 retirees. Schedule a complimentary review of your pension, Social Security timing, and savings.
+    </div>
+    <div class="doc-subhead" style="margin-top:32px;">What We Offer</div>
+    <div class="doc-body">A no-cost, no-pressure review of your full retirement picture — so you know exactly where you stand and what your options are.</div>
+    <div class="doc-cta">Book a Call</div>
+  </div>
+  <div class="doc-footer">Hale &amp; Associates · 516.313.6413 · Family-owned since 1983 · Independent · BBB A+ Rated</div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     OPTION 6: THIN FLOWING LINES
+     ═══════════════════════════════════════════ -->
+<section class="page" style="padding:0; background:#FAF8F5;">
+  <div class="option-label">
+    <div class="num">Option 6</div>
+    <div class="name">Thin Flowing Lines</div>
+    <div class="desc">Not filled shapes — just thin, elegant curves flowing across the page. Very restrained. Adds movement without any visual weight.</div>
+  </div>
+
+  <!-- Background shapes -->
+  <svg viewBox="0 0 816 1056" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute; top:0; left:0; width:100%; height:100%;">
+    <path d="M816 100 Q600 180 400 150 Q200 120 0 250" stroke="#228244" stroke-width="1.5" fill="none" opacity="0.1"/>
+    <path d="M816 140 Q600 220 400 190 Q200 160 0 290" stroke="#228244" stroke-width="1" fill="none" opacity="0.07"/>
+    <path d="M816 170 Q600 250 400 220 Q200 190 0 320" stroke="#228244" stroke-width="0.75" fill="none" opacity="0.05"/>
+
+    <path d="M0 750 Q200 700 400 730 Q600 760 816 680" stroke="#228244" stroke-width="1.5" fill="none" opacity="0.1"/>
+    <path d="M0 790 Q200 740 400 770 Q600 800 816 720" stroke="#228244" stroke-width="1" fill="none" opacity="0.07"/>
+    <path d="M0 820 Q200 770 400 800 Q600 830 816 750" stroke="#228244" stroke-width="0.75" fill="none" opacity="0.05"/>
+  </svg>
+
+  <!-- Document content -->
+  <div style="position:relative; z-index:1; padding:80px 64px;">
+    <img src="../assets/brand-book/Hale Logo Green.png" alt="Hale" class="doc-logo">
+    <div class="doc-headline">Are You Getting the Most From Your Retirement Benefits?</div>
+    <div class="doc-body" style="margin-top:12px; margin-bottom:24px;">
+      Personalized retirement planning for Teamsters Local 294 retirees. Schedule a complimentary review of your pension, Social Security timing, and savings.
+    </div>
+    <div class="doc-subhead" style="margin-top:32px;">What We Offer</div>
+    <div class="doc-body">A no-cost, no-pressure review of your full retirement picture — so you know exactly where you stand and what your options are.</div>
+    <div class="doc-cta">Book a Call</div>
+  </div>
+  <div class="doc-footer">Hale &amp; Associates · 516.313.6413 · Family-owned since 1983 · Independent · BBB A+ Rated</div>
+</section>
+
+</body>
+</html>

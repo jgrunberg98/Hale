@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heading Font Comparison — Hale & Associates</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Serif+Display&family=Jost:wght@300;400;500;600;700&family=Lora:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Source+Serif+4:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Jost', sans-serif;
+      background: #FAF8F5;
+      color: #2C2A26;
+      padding: 60px 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .page-title {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #9B958A;
+      margin-bottom: 8px;
+    }
+    .page-subtitle {
+      font-family: 'Jost', sans-serif;
+      font-size: 1.1rem;
+      color: #6B665C;
+      margin-bottom: 60px;
+      line-height: 1.6;
+    }
+
+    .font-card {
+      background: #FFFFFF;
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 8px;
+      padding: 48px 52px;
+      margin-bottom: 32px;
+      position: relative;
+    }
+    .font-card__label {
+      position: absolute;
+      top: 20px;
+      right: 24px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #9B958A;
+      background: #F2EDE7;
+      padding: 4px 12px;
+      border-radius: 3px;
+    }
+    .font-card__label--current {
+      background: #228244;
+      color: #fff;
+    }
+    .font-card__name {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #228244;
+      margin-bottom: 24px;
+    }
+    .font-card__hero {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 500;
+      line-height: 1.25;
+      margin-bottom: 12px;
+      color: #2C2A26;
+    }
+    .font-card__tagline {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 400;
+      line-height: 1.3;
+      margin-bottom: 28px;
+      color: #2C2A26;
+    }
+    .font-card__section-head {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-bottom: 10px;
+      color: #228244;
+    }
+    .font-card__body {
+      font-family: 'Jost', sans-serif;
+      font-size: 1rem;
+      color: #6B665C;
+      line-height: 1.8;
+      max-width: 600px;
+      margin-bottom: 24px;
+    }
+    .font-card__small-head {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #2C2A26;
+    }
+    .font-card__small-body {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.92rem;
+      color: #6B665C;
+      line-height: 1.7;
+      max-width: 500px;
+    }
+    .font-card__divider {
+      width: 60px;
+      height: 1px;
+      background: rgba(0,0,0,0.12);
+      margin: 28px 0;
+    }
+
+    /* Font families */
+    .font-lora .font-card__hero,
+    .font-lora .font-card__tagline,
+    .font-lora .font-card__section-head,
+    .font-lora .font-card__small-head {
+      font-family: 'Lora', Georgia, serif;
+    }
+    .font-playfair .font-card__hero,
+    .font-playfair .font-card__tagline,
+    .font-playfair .font-card__section-head,
+    .font-playfair .font-card__small-head {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+    .font-cormorant .font-card__hero,
+    .font-cormorant .font-card__tagline,
+    .font-cormorant .font-card__section-head,
+    .font-cormorant .font-card__small-head {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+    }
+    .font-source .font-card__hero,
+    .font-source .font-card__tagline,
+    .font-source .font-card__section-head,
+    .font-source .font-card__small-head {
+      font-family: 'Source Serif 4', Georgia, serif;
+    }
+    .font-dm .font-card__hero,
+    .font-dm .font-card__tagline,
+    .font-dm .font-card__section-head,
+    .font-dm .font-card__small-head {
+      font-family: 'DM Serif Display', Georgia, serif;
+    }
+  </style>
+</head>
+<body>
+
+  <p class="page-title">Font Comparison</p>
+  <p class="page-subtitle">Each card shows a different heading font paired with Jost body text. Same content, same layout — only the heading font changes.</p>
+
+  <!-- LORA (current) -->
+  <div class="font-card font-lora">
+    <span class="font-card__label font-card__label--current">Current</span>
+    <p class="font-card__name">1. Lora</p>
+    <h1 class="font-card__hero">Independent Advice.<br>Trusted Guidance.</h1>
+    <p class="font-card__tagline">Protecting what you built</p>
+    <p class="font-card__body">Founded in 1983 by Duke Hale, Hale & Associates has spent four decades helping families protect and grow their retirement savings. We're not tied to any bank, brokerage, or wirehouse.</p>
+    <div class="font-card__divider"></div>
+    <p class="font-card__section-head">Ready to protect your retirement?</p>
+    <p class="font-card__body">Book a free, no-obligation consultation. We'll review your situation and show you what's possible.</p>
+    <div class="font-card__divider"></div>
+    <p class="font-card__small-head">Family-owned. Fiercely independent.</p>
+    <p class="font-card__small-body">Our advice is built around you — not a product shelf. No product pushing. No one-size-fits-all.</p>
+  </div>
+
+  <!-- PLAYFAIR DISPLAY -->
+  <div class="font-card font-playfair">
+    <span class="font-card__label">Option</span>
+    <p class="font-card__name">2. Playfair Display</p>
+    <h1 class="font-card__hero">Independent Advice.<br>Trusted Guidance.</h1>
+    <p class="font-card__tagline">Protecting what you built</p>
+    <p class="font-card__body">Founded in 1983 by Duke Hale, Hale & Associates has spent four decades helping families protect and grow their retirement savings. We're not tied to any bank, brokerage, or wirehouse.</p>
+    <div class="font-card__divider"></div>
+    <p class="font-card__section-head">Ready to protect your retirement?</p>
+    <p class="font-card__body">Book a free, no-obligation consultation. We'll review your situation and show you what's possible.</p>
+    <div class="font-card__divider"></div>
+    <p class="font-card__small-head">Family-owned. Fiercely independent.</p>
+    <p class="font-card__small-body">Our advice is built around you — not a product shelf. No product pushing. No one-size-fits-all.</p>
+  </div>
+
+  <!-- CORMORANT GARAMOND -->
+  <div class="font-card font-cormorant">
+    <span class="font-card__label">Option</span>
+    <p class="font-card__name">3. Cormorant Garamond</p>
+    <h1 class="font-card__hero">Independent Advice.<br>Trusted Guidance.</h1>
+    <p class="font-card__tagline">Protecting what you built</p>
+    <p class="font-card__body">Founded in 1983 by Duke Hale, Hale & Associates has spent four decades helping families protect and grow their retirement savings. We're not tied to any bank, brokerage, or wirehouse.</p>
+    <div class="font-card__divider"></div>
+    <p class="font-card__section-head">Ready to protect your retirement?</p>
+    <p class="font-card__body">Book a free, no-obligation consultation. We'll review your situation and show you what's possible.</p>
+    <div class="font-card__divider"></div>
+    <p class="font-card__small-head">Family-owned. Fiercely independent.</p>
+    <p class="font-card__small-body">Our advice is built around you — not a product shelf. No product pushing. No one-size-fits-all.</p>
+  </div>
+
+  <!-- SOURCE SERIF 4 -->
+  <div class="font-card font-source">
+    <span class="font-card__label">Option</span>
+    <p class="font-card__name">4. Source Serif 4</p>
+    <h1 class="font-card__hero">Independent Advice.<br>Trusted Guidance.</h1>
+    <p class="font-card__tagline">Protecting what you built</p>
+    <p class="font-card__body">Founded in 1983 by Duke Hale, Hale & Associates has spent four decades helping families protect and grow their retirement savings. We're not tied to any bank, brokerage, or wirehouse.</p>
+    <div class="font-card__divider"></div>
+    <p class="font-card__section-head">Ready to protect your retirement?</p>
+    <p class="font-card__body">Book a free, no-obligation consultation. We'll review your situation and show you what's possible.</p>
+    <div class="font-card__divider"></div>
+    <p class="font-card__small-head">Family-owned. Fiercely independent.</p>
+    <p class="font-card__small-body">Our advice is built around you — not a product shelf. No product pushing. No one-size-fits-all.</p>
+  </div>
+
+  <!-- DM SERIF DISPLAY -->
+  <div class="font-card font-dm">
+    <span class="font-card__label">Option</span>
+    <p class="font-card__name">5. DM Serif Display</p>
+    <h1 class="font-card__hero">Independent Advice.<br>Trusted Guidance.</h1>
+    <p class="font-card__tagline">Protecting what you built</p>
+    <p class="font-card__body">Founded in 1983 by Duke Hale, Hale & Associates has spent four decades helping families protect and grow their retirement savings. We're not tied to any bank, brokerage, or wirehouse.</p>
+    <div class="font-card__divider"></div>
+    <p class="font-card__section-head">Ready to protect your retirement?</p>
+    <p class="font-card__body">Book a free, no-obligation consultation. We'll review your situation and show you what's possible.</p>
+    <div class="font-card__divider"></div>
+    <p class="font-card__small-head">Family-owned. Fiercely independent.</p>
+    <p class="font-card__small-body">Our advice is built around you — not a product shelf. No product pushing. No one-size-fits-all.</p>
+  </div>
+
+</body>
+</html>

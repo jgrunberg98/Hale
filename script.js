@@ -18,17 +18,24 @@ if (!isInnerPage) {
   }
 }
 
-// Mobile nav toggle
+// Mobile nav toggle (dropdown)
 const toggle = document.getElementById('navToggle');
-const links = document.getElementById('navLinks');
-if (toggle && links) {
+const sidebar = document.getElementById('navSidebar');
+if (toggle && sidebar) {
+  function closeNav() {
+    sidebar.classList.remove('active');
+    toggle.classList.remove('active');
+  }
   toggle.addEventListener('click', () => {
-    links.classList.toggle('active');
+    sidebar.classList.contains('active') ? closeNav() : (sidebar.classList.add('active'), toggle.classList.add('active'));
   });
-  links.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      links.classList.remove('active');
-    });
+  document.addEventListener('click', (e) => {
+    if (sidebar.classList.contains('active') && !sidebar.contains(e.target) && !toggle.contains(e.target)) {
+      closeNav();
+    }
+  });
+  sidebar.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeNav);
   });
 }
 
@@ -63,6 +70,58 @@ if (counters.length) {
   }
   window.addEventListener('scroll', animateCounters);
   animateCounters();
+}
+
+// Services swoosh + card slide-from-left animation
+const servicesSection = document.querySelector('.services');
+const servicesGrid = document.querySelector('.services__grid');
+const servicesSwoosh = document.querySelector('.services__swoosh');
+if (servicesGrid) {
+  const cards = Array.from(servicesGrid.querySelectorAll('.service-card'));
+  const isMobile = window.matchMedia('(max-width: 900px)').matches;
+
+  // Position swoosh vertically centered on the grid
+  if (servicesSwoosh) {
+    function positionSwoosh() {
+      var gridCenter = servicesGrid.offsetTop + servicesGrid.offsetHeight / 2;
+      var swooshHeight = servicesSwoosh.offsetHeight;
+      servicesSwoosh.style.top = (gridCenter - swooshHeight / 2) + 'px';
+    }
+    positionSwoosh();
+    window.addEventListener('resize', positionSwoosh);
+  }
+
+  function revealCards() {
+    if (isMobile) {
+      // Stagger cards one at a time, 250ms apart
+      cards.forEach(function(card, i) {
+        setTimeout(function() { card.classList.add('visible'); }, i * 250);
+      });
+    } else {
+      cards[0].classList.add('visible');
+      cards[1].classList.add('visible');
+      setTimeout(function() {
+        cards[2].classList.add('visible');
+        cards[3].classList.add('visible');
+      }, 600);
+    }
+  }
+
+  var sectionObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        // Swoosh fades in first, cards follow after
+        if (servicesSwoosh) {
+          servicesSwoosh.classList.add('visible');
+          setTimeout(revealCards, 500);
+        } else {
+          revealCards();
+        }
+        sectionObserver.unobserve(servicesSection);
+      }
+    });
+  }, { threshold: 0.3, rootMargin: '0px 0px -15% 0px' });
+  sectionObserver.observe(servicesSection);
 }
 
 // Team bio modal (about page)
@@ -248,6 +307,22 @@ if (bioModal) {
     if (e.key === 'Escape' && bioModal.classList.contains('active')) closeModal();
   });
 }
+
+// Fade-in section headings on scroll
+document.querySelectorAll('section h2').forEach(function(h2) {
+  h2.classList.add('fade-in');
+});
+const fadeObserver = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      fadeObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+document.querySelectorAll('.fade-in').forEach(function(el) {
+  fadeObserver.observe(el);
+});
 
 // Accordion (services page)
 document.querySelectorAll('.accordion__trigger').forEach(trigger => {
