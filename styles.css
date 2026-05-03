@@ -36,6 +36,7 @@ body {
 img { max-width: 100%; height: auto; display: block; }
 a { text-decoration: none; color: inherit; }
 .container { max-width: var(--max-width); margin: 0 auto; padding: 0 32px; }
+h1, h2, h3, h4, p, li, span, a { text-wrap: balance; }
 h1, h2, h3, h4 { color: var(--text); }
 
 /* ---- BUTTONS ---- */
@@ -80,7 +81,7 @@ h1, h2, h3, h4 { color: var(--text); }
 
 /* ---- EYEBROW ---- */
 .eyebrow {
-  font-size: 0.95rem;
+  font-size: 0.75rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.18em;
@@ -277,6 +278,12 @@ h1, h2, h3, h4 { color: var(--text); }
   aspect-ratio: 4/3;
   object-fit: cover;
 }
+
+#story .split { gap: 16px; }
+#story .eyebrow { margin-bottom: 6px; font-size: 1rem; }
+#team .eyebrow { font-size: 1rem; }
+#story .split__text h2 { margin-bottom: 0; }
+#story .services__cta { margin-top: 16px; }
 
 /* ---- VIDEO PLACEHOLDER ---- */
 .video-placeholder {
@@ -476,10 +483,14 @@ h1, h2, h3, h4 { color: var(--text); }
   gap: 20px;
 }
 .footer__brand img {
-  height: 28px;
+  height: 26px;
   width: auto;
-  max-width: fit-content;
+  max-width: none;
+  object-fit: contain;
+  flex-shrink: 0;
+  align-self: flex-start;
   opacity: 0.85;
+  margin-left: -35px;
 }
 .footer__social {
   display: flex;
@@ -1201,14 +1212,87 @@ a.footer__contact-value:hover { color: var(--green); }
   .trust-bar__inner { flex-wrap: wrap; }
   .trust-item { flex: 1 1 45%; padding: 16px 0; }
   .trust-divider { display: none; }
-  .container { padding: 0 20px; }
   .footer__main { padding: 40px 20px 36px; }
   .footer__brand-row { flex-direction: column; gap: 12px; }
-  .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .team-grid { grid-template-columns: 1fr; }
+  .team-grid--leadership { grid-template-columns: 1fr !important; max-width: none; }
+  .team-card { text-align: left; }
   .team-card h3 { font-size: 1.4rem; }
   .team-card__title { font-size: 1.1rem; }
   .bio-modal__inner { grid-template-columns: 1fr; }
   .bio-modal__photo { max-width: 200px; margin: 0 auto; }
   .bio-modal__content { padding: 28px; }
   .accordion__content { padding-left: 0; }
+  .container { padding-left: 24px; padding-right: 24px; }
+  #story {
+    padding-top: 52px !important;
+    padding-bottom: 52px;
+  }
+  #story .split {
+    gap: 24px !important;
+  }
+  #story .split__text {
+    margin-bottom: 4px;
+  }
+  #story .services__cta {
+    margin-top: 24px !important;
+  }
+  #story .eyebrow, #team .eyebrow, .page-hero .eyebrow { font-size: 1rem; }
+  section:not(.page-hero), .story, .services, .cta { padding-top: 35px !important; }
+  .page-hero { padding-top: 120px !important; }
+}
+
+/* ---- MOBILE-ONLY FOOTER ELEMENTS (hidden on desktop) ---- */
+.footer__legal--mobile { display: none; }
+.footer__bottom--mobile { display: none; }
+
+/* ---- MOBILE FOOTER LAYOUT ---- */
+@media (max-width: 900px) {
+  .footer__main { padding: 36px 28px 28px 15vw; }
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  #story .eyebrow, #team .eyebrow, .page-hero .eyebrow { font-size: 1rem; }
+  .footer__contact-col { display: none !important; }
+  .footer__nav-col { display: none !important; }
+  .footer__brand .footer__contact--mobile { display: flex; padding-left: 0; }
+  .footer__contact-value { font-size: 1.1rem; }
+  .footer__social { padding-left: 0 !important; margin-left: -2px; }
+  .footer__social svg { width: 25px; height: 25px; }
+
+  .footer__legal--mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .footer__legal--mobile a {
+    font-size: 1.1rem;
+    white-space: nowrap;
+    color: #999999;
+    transition: color 0.2s;
+  }
+  .footer__legal--mobile a:hover { color: var(--green); }
+
+  .footer__legal { display: none !important; }
+  .footer__bottom { display: none !important; }
+
+  .footer__bottom--mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+  .footer__bottom--mobile .footer__copyright {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: left;
+  }
+  .footer__bottom--mobile .bbb-badge {
+    transform: scale(1.4);
+    transform-origin: left center;
+    margin-top: 20px;
+  }
 }

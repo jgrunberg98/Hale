@@ -132,7 +132,7 @@ const bioData = {
     license: 'CA LIC #0G98787',
     photo: 'https://haleandassociates.net/wp-content/uploads/2025/01/Hale-Photos-1.jpg',
     email: 'duke@haleandassociates.net',
-    phone: '(317) 677-7178',
+    phone: '317.677.7178',
     bio: [
       'Duke is a native Hoosier who grew up in Indianapolis, IN where he attended high school. Duke graduated from Ball State University in Muncie, Indiana in 1972 with a Bachelor of Science degree. He also completed post graduate work at Butler University and received an E.P.B.A. from Columbia University in 1994.',
       'Prior to starting his own business, Duke Hale was C.O.O. of $4 billion American Isuzu, C.E.O. of Lotus Holdings, Inc. and was President of NASDAQ traded Starcraft Automotive. His public company experience has been very helpful with senior clients on financial issues and risk protection.',
@@ -145,7 +145,7 @@ const bioData = {
     license: 'CA LIC #0G30788',
     photo: 'https://haleandassociates.net/wp-content/uploads/2025/01/wayne-miller-2_orig.jpg',
     email: 'wayne@haleandassociates.net',
-    phone: '(949) 943-5266',
+    phone: '949.943.5266',
     bio: [
       'Wayne Miller comes to Hale & Associates, Inc. from an extensive financial background. As a double major in both Finance and Economics, Wayne Miller attended the University of Massachusetts at Amherst.',
       'When Wayne was 20 years old he started his financial career at MBNA America Bank, N.A., which is now Bank of America. At 23 years old, he assisted managing a division of over 400 employees in Aliso Viejo, CA. Wayne continued his career on the retail side of the industry at CitiGroup, as a branch account manager.',
@@ -158,7 +158,7 @@ const bioData = {
     license: '',
     photo: 'https://haleandassociates.net/wp-content/uploads/2025/01/darren-grunberg_orig.jpg',
     email: '',
-    phone: '(317) 614-7508',
+    phone: '317.614.7508',
     bio: [
       'Darren Grunberg is a finance expert with 33 years of experience in trading and strategy. A New York native, he earned his accounting degree from the University of Buffalo in 1992 and is a CPA. He has worked at Fuji Capital Markets, the Royal Bank of Canada, and T3 Trading, LLC, specializing in financial markets, retirement planning, and benefits.'
     ]
@@ -169,7 +169,7 @@ const bioData = {
     license: '',
     photo: 'https://haleandassociates.net/wp-content/uploads/2025/01/Hale-FINAL-BARRY.jpg',
     email: '',
-    phone: '(317) 677-7178',
+    phone: '317.677.7178',
     bio: [
       'Barry McCurry, Director of Sales at Hale & Associates since 2010, has driven growth by strengthening client relationships and building a top-performing team. With 15+ years in financial services, he prioritizes trust, transparency, and tailored solutions.'
     ]
@@ -180,7 +180,7 @@ const bioData = {
     license: '',
     photo: 'https://haleandassociates.net/wp-content/uploads/2025/02/Sean-Hall-NEW.jpg',
     email: '',
-    phone: '(317) 677-7178',
+    phone: '317.677.7178',
     bio: [
       'Sean Hall brings a strong background in sales and customer service. A graduate of Azusa Pacific University, he values integrity, trust, and service. Guided by his faith, Sean focuses on understanding client needs and providing tailored financial solutions, making him a trusted partner in their financial journey.'
     ]
@@ -191,7 +191,7 @@ const bioData = {
     license: '',
     photo: 'https://haleandassociates.net/wp-content/uploads/2025/08/UPdated-Shannon-Scheall.jpg',
     email: '',
-    phone: '(317) 677-7178',
+    phone: '317.677.7178',
     bio: [
       'Shannon Scheall, Client Services Manager, brings extensive experience in customer service and finance. With a background in mortgage processing, she excels at detail-oriented, client-focused support. Dedicated to trust and exceptional service, Shannon ensures clients feel informed, valued, and well-supported.'
     ]
@@ -202,7 +202,7 @@ const bioData = {
     license: '',
     photo: 'https://haleandassociates.net/wp-content/uploads/2025/01/Garcia-Photo.jpg',
     email: '',
-    phone: '(317) 677-7178',
+    phone: '317.677.7178',
     bio: [
       'Kevin Garcia, Regional Sales Manager at Hale & Associates since 2018, drives success in the Southeastern Region. Specializing in the federal employee market, he builds relationships, listens to client needs, and delivers tailored financial solutions, reinforcing the firm\'s excellence and integrity.'
     ]
@@ -213,7 +213,7 @@ const bioData = {
     license: '',
     photo: 'https://haleandassociates.net/wp-content/uploads/2025/01/vikki-cao-2024.jpg',
     email: '',
-    phone: '(317) 677-7178',
+    phone: '317.677.7178',
     bio: [
       'With 13+ years in finance, Vikki Cao helps individuals and businesses achieve long-term security. As a brokerage founder, she specialized in commercial and personal insurance. Now at Hale & Associates, she provides strategic financial solutions with a client-focused, integrity-driven approach.'
     ]
@@ -224,7 +224,7 @@ const bioData = {
     license: '',
     photo: 'https://haleandassociates.net/wp-content/uploads/2025/01/andrew-bohn-2024_orig.jpg',
     email: 'andrew.bohn@haleandassociates.net',
-    phone: '(317) 677-7178',
+    phone: '317.677.7178',
     bio: [
       'Andrew, a sales professional with 20+ years of experience, specializes in life and health insurance. Before joining us, he excelled at Opolis, helping clients secure their financial futures. A San Diego State graduate in Business Management, he is known for his strategic approach and strong client relationships. A devoted husband and father of three, he is driven by faith and a passion for serving others.'
     ]
@@ -235,7 +235,7 @@ const bioData = {
     license: '',
     photo: 'https://haleandassociates.net/wp-content/uploads/2025/06/Meliss-Vigrass-Final.png',
     email: 'melissa@haleandassociates.net',
-    phone: '(317) 677-7178',
+    phone: '317.677.7178',
     bio: [
       'Melissa Vigrass brings over 20 years of experience as a military spouse, with a strong background in organization, adaptability, and service. Known for her clear communication and attention to detail, she helps ensure a smooth, supportive experience for clients with care and professionalism.'
     ]
@@ -246,7 +246,7 @@ const bioData = {
     license: '',
     photo: 'https://haleandassociates.net/wp-content/uploads/2025/08/Andrew-Wat-1.jpg',
     email: 'andrew.watkins@haleandassociates.net',
-    phone: '(317) 677-7178',
+    phone: '317.677.7178',
     bio: []
   }
 };
@@ -275,13 +275,7 @@ if (bioModal) {
       bioEl.innerHTML = data.bio.map(p => '<p>' + p + '</p>').join('');
 
       const phoneEl = document.getElementById('bioPhone');
-      if (data.phone) {
-        var phoneDigits = data.phone.replace(/\D/g, '');
-        phoneEl.innerHTML = '<span class="bio-modal__label">P:</span> <a href="tel:' + phoneDigits + '">' + data.phone + '</a>';
-        phoneEl.style.display = 'block';
-      } else {
-        phoneEl.style.display = 'none';
-      }
+      phoneEl.style.display = 'none';
 
       const emailEl = document.getElementById('bioEmail');
       if (data.email) {
@@ -293,12 +287,14 @@ if (bioModal) {
 
       bioModal.classList.add('active');
       document.body.style.overflow = 'hidden';
+      document.getElementById('nav').style.display = 'none';
     });
   });
 
   function closeModal() {
     bioModal.classList.remove('active');
     document.body.style.overflow = '';
+    document.getElementById('nav').style.display = '';
   }
 
   closeBtn.addEventListener('click', closeModal);

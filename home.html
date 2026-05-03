@@ -79,9 +79,6 @@
       padding-left: 22px;
     }
 
-    /* Hide mobile-only legal links on desktop */
-    .footer__legal--mobile { display: none; }
-
     /* Nav: fully transparent until scrolled */
     .nav { backdrop-filter: none; }
     .nav__inner { position: relative; }
@@ -132,63 +129,8 @@
       .nav__overlay { display: none !important; }
     }
 
-    /* ── Tablet/mobile overrides ── */
-    @media (max-width: 768px) {
-      .footer__main { padding: 36px 28px 28px 15vw; }
-      .footer__bottom { padding-left: 15vw; padding-right: 20px; }
-
-      .footer__grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      /* Hide contact column and company nav on mobile */
-      .footer__contact-col { display: none; }
-      .footer__nav-col { display: none; }
-
-      /* Show mobile contact under brand */
-      .footer__brand .footer__contact--mobile {
-        display: flex;
-        padding-left: 0;
-      }
-
-      .footer__contact-value { font-size: 1.4rem; }
-      .footer__social { padding-left: 0; }
-      .footer__social svg { width: 25px; height: 25px; }
-
-      /* Mobile legal links (below social, above bottom bar) */
-      .footer__legal--mobile {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        margin-top: 8px;
-      }
-      .footer__legal--mobile a {
-        font-size: 1.4rem;
-        white-space: nowrap;
-        color: #999999;
-        transition: color 0.2s;
-      }
-      .footer__legal--mobile a:hover { color: var(--green); }
-
-      /* Hide desktop legal from bottom bar */
-      .footer__legal { display: none; }
-
-      /* Footer bottom */
-      .footer__bottom { flex-direction: column; align-items: flex-start; gap: 16px; }
-      .footer__bottom-left { flex-direction: column; align-items: flex-start; }
-      .bbb-badge { transform: scale(1.4); transform-origin: left center; }
-      .footer__copyright { font-size: 1.4rem; }
-    }
-
-    /* Mobile: bigger headers and body text */
+    /* Homepage-specific mobile overrides */
     @media (max-width: 640px) {
-      .section-heading,
-      .cta__inner h2,
-      .split__text h2 {
-        font-size: 2.7rem;
-        text-wrap: balance;
-      }
       .cta__inner li,
       .cta__inner p,
       .split__text p {
@@ -207,14 +149,14 @@
     <div class="nav__inner">
       <a href="home.html" class="nav__logo"><img src="assets/logo-wordmark.png" alt="Hale & Associates" /></a>
       <div class="nav__links" id="navLinks">
-        <a href="about.html">About</a>
+        <a href="about.html">Team</a>
         <a href="services.html">Services</a>
         <a href="offices.html">Locations</a>
         <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/wayne-haleandassociates/free-consultation?hide_landing_page_details=1&hide_gdpr_banner=1&text_color=2b2b2b&primary_color=228244'});return false;" class="btn btn--sm">Book a Call</a>
       </div>
       <button class="nav__toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
       <div class="nav__sidebar" id="navSidebar">
-        <a href="about.html">About</a>
+        <a href="about.html">Team</a>
         <a href="services.html">Services</a>
         <a href="offices.html">Locations</a>
         <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/wayne-haleandassociates/free-consultation?hide_landing_page_details=1&hide_gdpr_banner=1&text_color=2b2b2b&primary_color=228244'});return false;" class="btn btn--sm">Book a Call</a>
@@ -252,7 +194,8 @@
       </svg>
     </div>
     <div class="container">
-      <h2 class="section-heading">Protect what you built</h2>
+      <h2 class="section-heading" style="text-align: left; font-size: 2.05rem;">Plan with confidence</h2>
+      <p style="font-size: 1.1rem; color: var(--text-muted); margin-top: -40px; margin-bottom: 40px;">Retirement planning built around your goals — not someone else's products.</p>
       <div class="services__grid">
         <a href="services.html#retirement-income" class="service-card"><h3>Retirement Income</h3><p class="service-card__hover-text">Reliable, tax-efficient income that lasts.</p></a>
         <a href="services.html#safe-money" class="service-card"><h3>Safe Money Strategies</h3><p class="service-card__hover-text">Protect your principal with safety and growth.</p></a>
@@ -266,9 +209,9 @@
   <section class="story" id="story">
     <div class="container">
       <div class="split split--reverse">
-        <div class="split__text" style="text-align: center;">
-          <p class="eyebrow">About Us</p>
-          <h2>Family-owned for 40+ years</h2>
+        <div class="split__text" style="text-align: left;">
+          <p class="eyebrow">Our Story</p>
+          <h2 style="font-size: 2.05rem; margin-bottom: 0;">Independently owned since 1983</h2>
         </div>
         <div class="split__img split__img--video">
           <div style="position: relative; padding-top: 56.25%; border-radius: 1rem; overflow: hidden;">
@@ -282,22 +225,22 @@
           </div>
         </div>
       </div>
-      <div class="services__cta"><a href="about.html" class="link-arrow">Meet the team <span>&rarr;</span></a></div>
+      <div class="services__cta"><a href="about.html#team" class="link-arrow">Meet the team <span>&rarr;</span></a></div>
     </div>
   </section>
 
   <section class="cta cta--white" id="book">
     <div class="container">
-      <div class="cta__inner">
-        <h2>Ready to see where you stand?</h2>
+      <div class="cta__inner" style="max-width: 100%; background: #228244; border-radius: 20px; padding: 48px 28px;">
+        <h2 style="color: #fff; font-size: 2.05rem;">Ready to see where you stand?</h2>
         <div style="display: flex; justify-content: center; margin: 1.5rem 0;">
-          <ul style="list-style: none; padding: 0; margin: 0; font-size: 1.1rem; line-height: 2.4; text-align: left;">
-            <li>✕ &nbsp;No product pushing</li>
-            <li>✕ &nbsp;No hidden agendas</li>
-            <li>✕ &nbsp;No one-size-fits-all plans</li>
+          <ul style="list-style: none; padding: 0; margin: 0; font-size: 1.1rem; line-height: 2.4; text-align: left; color: rgba(255,255,255,0.8);">
+            <li style="padding-left: 1.8em; text-indent: -1.8em;">✕ &nbsp;No product pushing</li>
+            <li style="padding-left: 1.8em; text-indent: -1.8em;">✕ &nbsp;No hidden agendas</li>
+            <li style="padding-left: 1.8em; text-indent: -1.8em;">✕ &nbsp;No blanket solutions</li>
           </ul>
         </div>
-        <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/wayne-haleandassociates/free-consultation?hide_landing_page_details=1&hide_gdpr_banner=1&text_color=2b2b2b&primary_color=228244'});return false;" class="btn" style="font-size: 1.4rem; padding: 20px 48px;">Book a Call</a>
+        <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/wayne-haleandassociates/free-consultation?hide_landing_page_details=1&hide_gdpr_banner=1&text_color=2b2b2b&primary_color=228244'});return false;" class="btn" style="font-size: 1.4rem; padding: 20px 48px; background: #fff; color: #228244; border-color: #fff;">Book a Call</a>
       </div>
     </div>
   </section>
@@ -323,6 +266,13 @@
             <a href="privacy.html">Privacy Policy</a>
             <a href="terms.html">Terms &amp; Conditions</a>
           </div>
+          <div class="footer__bottom--mobile">
+            <span class="footer__copyright">&copy; 2026 Hale and Associates, LLC. All rights reserved. CA&nbsp;LIC&nbsp;#0G30788</span>
+            <a href="https://www.bbb.org/" target="_blank" rel="noopener" class="bbb-badge">
+              <svg class="bbb-badge__icon" viewBox="0 0 64 64" fill="none"><rect x="2" y="2" width="60" height="60" rx="6" fill="#005A8C" stroke="#0073B1" stroke-width="2"/><text x="32" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#fff">BBB</text><rect x="16" y="36" width="32" height="18" rx="3" fill="#228244"/><text x="32" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#fff">A+</text></svg>
+              <span class="bbb-badge__text"><strong>BBB A+ Rated</strong>Accredited Business</span>
+            </a>
+          </div>
         </div>
 
         <!-- Middle: Contact -->
@@ -339,7 +289,7 @@
           <h4 class="footer__heading">Company</h4>
           <nav class="footer__nav">
             <a href="home.html">Home</a>
-            <a href="about.html">About</a>
+            <a href="about.html">Team</a>
             <a href="services.html">Services</a>
             <a href="offices.html">Locations</a>
           </nav>

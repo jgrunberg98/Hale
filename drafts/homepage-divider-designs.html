@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage — Creative Divider Designs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #111; }
+
+    .label {
+      text-align: center;
+      color: #228244;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 48px 0 8px;
+      font-family: 'Jost', sans-serif;
+    }
+    .desc {
+      text-align: center;
+      color: #888;
+      font-size: 0.85rem;
+      font-family: 'Jost', sans-serif;
+      padding: 0 20px 20px;
+      max-width: 500px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    .phone {
+      max-width: 390px;
+      margin: 0 auto;
+      border: 2px solid #333;
+      border-radius: 24px;
+      overflow: hidden;
+      background: #FAF8F5;
+    }
+
+    .container { padding: 0 24px; }
+    .section { padding: 56px 0; position: relative; }
+
+    h2 {
+      font-family: 'Lora', Georgia, serif;
+      font-weight: 500;
+      color: #2B2B2B;
+      font-size: 2.2rem;
+      line-height: 1.2;
+      text-wrap: balance;
+      text-align: left;
+      margin-bottom: 32px;
+    }
+
+    .cards { display: flex; flex-direction: column; gap: 12px; }
+    .card {
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 16px;
+      padding: 24px 20px;
+      text-align: center;
+    }
+    .card h3 {
+      font-family: 'Jost', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: #2B2B2B;
+    }
+
+    .video-box {
+      background: #333;
+      border-radius: 1rem;
+      aspect-ratio: 16/9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-family: 'Jost', sans-serif;
+    }
+
+    .link-arrow {
+      color: #228244;
+      font-size: 1.4rem;
+      font-weight: 500;
+      font-family: 'Jost', sans-serif;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 18px 44px;
+      background: #228244;
+      color: #fff;
+      font-weight: 600;
+      font-size: 1.3rem;
+      letter-spacing: 0.04em;
+      border-radius: 12px;
+      font-family: 'Jost', sans-serif;
+    }
+
+    .cta-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+      font-family: 'Jost', sans-serif;
+      font-size: 1.05rem;
+      line-height: 2.2;
+    }
+
+    .trust-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 0;
+      flex-wrap: wrap;
+    }
+    .trust-item { text-align: center; flex: 1 1 30%; padding: 12px 0; }
+    .trust-num {
+      font-family: 'Jost', sans-serif;
+      font-size: 2rem;
+      font-weight: 400;
+      color: #2B2B2B;
+    }
+    .trust-label {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.85rem;
+      color: #6B6B6B;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-top: 6px;
+    }
+
+    .cta-card {
+      background: #228244;
+      border-radius: 20px;
+      padding: 48px 28px;
+      text-align: center;
+    }
+    .cta-card h2 { color: #fff; }
+    .cta-card .cta-list { color: rgba(255,255,255,0.8); }
+    .cta-card .btn { background: #fff; color: #228244; }
+
+    .spacer { height: 80px; background: #111; }
+
+    /* ═══════════════════════════════════════
+       VERSION A: Diagonal slash cuts
+       ═══════════════════════════════════════ */
+    .slash-down {
+      position: relative;
+      height: 50px;
+      overflow: hidden;
+    }
+    .slash-down svg {
+      display: block;
+      width: 100%;
+      height: 100px;
+      position: absolute;
+      top: -25px;
+    }
+
+    /* ═══════════════════════════════════════
+       VERSION B: Organic wave + green fill
+       ═══════════════════════════════════════ */
+    .wave-divider {
+      position: relative;
+      height: 60px;
+      overflow: hidden;
+      background: #FAF8F5;
+    }
+    .wave-divider svg {
+      display: block;
+      width: 100%;
+      height: 60px;
+    }
+
+    /* ═══════════════════════════════════════
+       VERSION C: Swoosh arcs with dots
+       ═══════════════════════════════════════ */
+    .arc-divider {
+      position: relative;
+      padding: 28px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+    .arc-divider__line {
+      flex: 1;
+      height: 1px;
+      background: rgba(0,0,0,0.1);
+    }
+    .arc-divider__icon {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════
+     VERSION A: Diagonal Slash Cuts
+     ════════════════════════════════════════════ -->
+<div class="label">Version A — Diagonal Cuts</div>
+<div class="desc">Angular slashes between sections. Creates visual energy and a sense of forward motion. The green fill bleeds from one section into the next.</div>
+
+<div class="phone">
+  <div class="trust-bar">
+    <div class="trust-item"><div class="trust-num">40+</div><div class="trust-label">Years</div></div>
+    <div class="trust-item"><div class="trust-num">50</div><div class="trust-label">States</div></div>
+    <div class="trust-item"><div class="trust-num">1,000+</div><div class="trust-label">Retirees</div></div>
+  </div>
+
+  <div class="slash-down">
+    <svg viewBox="0 0 400 100" preserveAspectRatio="none">
+      <polygon points="0,0 400,30 400,70 0,100" fill="#228244" opacity="0.08"/>
+      <line x1="0" y1="50" x2="400" y2="20" stroke="#228244" stroke-width="1.5" opacity="0.25"/>
+    </svg>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <h2>Protect what you built</h2>
+      <div class="cards">
+        <div class="card"><h3>Retirement Income</h3></div>
+        <div class="card"><h3>Safe Money Strategies</h3></div>
+        <div class="card"><h3>Tax & Estate Planning</h3></div>
+        <div class="card"><h3>Social Security & Medicare</h3></div>
+      </div>
+      <div style="margin-top: 32px;"><a class="link-arrow">View all services &rarr;</a></div>
+    </div>
+  </div>
+
+  <div class="slash-down">
+    <svg viewBox="0 0 400 100" preserveAspectRatio="none">
+      <polygon points="0,30 400,0 400,100 0,70" fill="#228244" opacity="0.08"/>
+      <line x1="0" y1="50" x2="400" y2="80" stroke="#228244" stroke-width="1.5" opacity="0.25"/>
+    </svg>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <h2>Independently owned since 1983</h2>
+      <div class="video-box">Video</div>
+      <div style="margin-top: 32px;"><a class="link-arrow">Meet the team &rarr;</a></div>
+    </div>
+  </div>
+
+  <div class="slash-down">
+    <svg viewBox="0 0 400 100" preserveAspectRatio="none">
+      <polygon points="0,0 400,30 400,70 0,100" fill="#228244" opacity="0.08"/>
+      <line x1="0" y1="50" x2="400" y2="20" stroke="#228244" stroke-width="1.5" opacity="0.25"/>
+    </svg>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="cta-card">
+        <h2>Ready to see where you stand?</h2>
+        <ul class="cta-list">
+          <li>&times; &nbsp;No product pushing</li>
+          <li>&times; &nbsp;No hidden agendas</li>
+          <li>&times; &nbsp;No one-size-fits-all plans</li>
+        </ul>
+        <a class="btn">Book a Call</a>
+      </div>
+    </div>
+  </div>
+  <div style="height: 20px;"></div>
+</div>
+
+<div class="spacer"></div>
+
+<!-- ════════════════════════════════════════════
+     VERSION B: Organic Waves
+     ════════════════════════════════════════════ -->
+<div class="label">Version B — Organic Waves</div>
+<div class="desc">Soft curved waves with a green tint. Natural, approachable feel. The curves alternate direction creating a gentle rhythm down the page.</div>
+
+<div class="phone">
+  <div class="trust-bar">
+    <div class="trust-item"><div class="trust-num">40+</div><div class="trust-label">Years</div></div>
+    <div class="trust-item"><div class="trust-num">50</div><div class="trust-label">States</div></div>
+    <div class="trust-item"><div class="trust-num">1,000+</div><div class="trust-label">Retirees</div></div>
+  </div>
+
+  <div class="wave-divider">
+    <svg viewBox="0 0 400 60" preserveAspectRatio="none">
+      <path d="M0 30 Q100 0 200 30 Q300 60 400 30 L400 60 L0 60 Z" fill="#228244" opacity="0.06"/>
+      <path d="M0 30 Q100 0 200 30 Q300 60 400 30" fill="none" stroke="#228244" stroke-width="1.5" opacity="0.2"/>
+      <path d="M0 38 Q100 12 200 38 Q300 64 400 38" fill="none" stroke="#228244" stroke-width="1" opacity="0.1"/>
+    </svg>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <h2>Protect what you built</h2>
+      <div class="cards">
+        <div class="card"><h3>Retirement Income</h3></div>
+        <div class="card"><h3>Safe Money Strategies</h3></div>
+        <div class="card"><h3>Tax & Estate Planning</h3></div>
+        <div class="card"><h3>Social Security & Medicare</h3></div>
+      </div>
+      <div style="margin-top: 32px;"><a class="link-arrow">View all services &rarr;</a></div>
+    </div>
+  </div>
+
+  <div class="wave-divider">
+    <svg viewBox="0 0 400 60" preserveAspectRatio="none">
+      <path d="M0 30 Q100 60 200 30 Q300 0 400 30 L400 60 L0 60 Z" fill="#228244" opacity="0.06"/>
+      <path d="M0 30 Q100 60 200 30 Q300 0 400 30" fill="none" stroke="#228244" stroke-width="1.5" opacity="0.2"/>
+      <path d="M0 22 Q100 52 200 22 Q300 -8 400 22" fill="none" stroke="#228244" stroke-width="1" opacity="0.1"/>
+    </svg>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <h2>Independently owned since 1983</h2>
+      <div class="video-box">Video</div>
+      <div style="margin-top: 32px;"><a class="link-arrow">Meet the team &rarr;</a></div>
+    </div>
+  </div>
+
+  <div class="wave-divider">
+    <svg viewBox="0 0 400 60" preserveAspectRatio="none">
+      <path d="M0 20 Q80 50 180 25 Q280 0 400 35 L400 60 L0 60 Z" fill="#228244" opacity="0.06"/>
+      <path d="M0 20 Q80 50 180 25 Q280 0 400 35" fill="none" stroke="#228244" stroke-width="1.5" opacity="0.2"/>
+    </svg>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="cta-card">
+        <h2>Ready to see where you stand?</h2>
+        <ul class="cta-list">
+          <li>&times; &nbsp;No product pushing</li>
+          <li>&times; &nbsp;No hidden agendas</li>
+          <li>&times; &nbsp;No one-size-fits-all plans</li>
+        </ul>
+        <a class="btn">Book a Call</a>
+      </div>
+    </div>
+  </div>
+  <div style="height: 20px;"></div>
+</div>
+
+<div class="spacer"></div>
+
+<!-- ════════════════════════════════════════════
+     VERSION C: Leaf/Swoosh Icon Breaks
+     ════════════════════════════════════════════ -->
+<div class="label">Version C — Leaf Icon Breaks</div>
+<div class="desc">Thin lines with a small green leaf/growth icon at center. Ties to the brand's nature/growth theme. Subtle but distinctive.</div>
+
+<div class="phone">
+  <div class="trust-bar">
+    <div class="trust-item"><div class="trust-num">40+</div><div class="trust-label">Years</div></div>
+    <div class="trust-item"><div class="trust-num">50</div><div class="trust-label">States</div></div>
+    <div class="trust-item"><div class="trust-num">1,000+</div><div class="trust-label">Retirees</div></div>
+  </div>
+
+  <div class="arc-divider" style="padding: 20px 24px;">
+    <div class="arc-divider__line"></div>
+    <svg class="arc-divider__icon" viewBox="0 0 36 36" fill="none">
+      <path d="M18 32 C18 32 8 22 8 14 C8 8 12 4 18 4 C24 4 28 8 28 14 C28 22 18 32 18 32Z" fill="#228244" opacity="0.12"/>
+      <path d="M18 28 C18 28 11 20 11 14 C11 10 14 7 18 7 C22 7 25 10 25 14 C25 20 18 28 18 28Z" stroke="#228244" stroke-width="1.2" fill="none" opacity="0.4"/>
+      <line x1="18" y1="14" x2="18" y2="26" stroke="#228244" stroke-width="1" opacity="0.3"/>
+      <path d="M18 18 Q14 15 13 12" stroke="#228244" stroke-width="0.8" fill="none" opacity="0.3"/>
+      <path d="M18 20 Q22 17 23 14" stroke="#228244" stroke-width="0.8" fill="none" opacity="0.3"/>
+    </svg>
+    <div class="arc-divider__line"></div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <h2>Protect what you built</h2>
+      <div class="cards">
+        <div class="card"><h3>Retirement Income</h3></div>
+        <div class="card"><h3>Safe Money Strategies</h3></div>
+        <div class="card"><h3>Tax & Estate Planning</h3></div>
+        <div class="card"><h3>Social Security & Medicare</h3></div>
+      </div>
+      <div style="margin-top: 32px;"><a class="link-arrow">View all services &rarr;</a></div>
+    </div>
+  </div>
+
+  <div class="arc-divider" style="padding: 20px 24px;">
+    <div class="arc-divider__line"></div>
+    <svg class="arc-divider__icon" viewBox="0 0 36 36" fill="none">
+      <circle cx="18" cy="18" r="14" fill="#228244" opacity="0.08"/>
+      <circle cx="18" cy="18" r="10" stroke="#228244" stroke-width="1" fill="none" opacity="0.2"/>
+      <path d="M12 18 Q15 12 18 12 Q21 12 24 18 Q21 24 18 24 Q15 24 12 18Z" fill="#228244" opacity="0.12"/>
+      <path d="M18 10 L18 26 M10 18 L26 18" stroke="#228244" stroke-width="0.6" opacity="0.2"/>
+    </svg>
+    <div class="arc-divider__line"></div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <h2>Independently owned since 1983</h2>
+      <div class="video-box">Video</div>
+      <div style="margin-top: 32px;"><a class="link-arrow">Meet the team &rarr;</a></div>
+    </div>
+  </div>
+
+  <div class="arc-divider" style="padding: 20px 24px;">
+    <div class="arc-divider__line"></div>
+    <svg class="arc-divider__icon" viewBox="0 0 36 36" fill="none">
+      <path d="M6 30 Q10 10 18 6 Q26 10 30 30" stroke="#228244" stroke-width="1.2" fill="none" opacity="0.25"/>
+      <path d="M10 28 Q14 14 18 10 Q22 14 26 28" fill="#228244" opacity="0.08"/>
+      <circle cx="18" cy="8" r="2.5" fill="#228244" opacity="0.2"/>
+    </svg>
+    <div class="arc-divider__line"></div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="cta-card">
+        <h2>Ready to see where you stand?</h2>
+        <ul class="cta-list">
+          <li>&times; &nbsp;No product pushing</li>
+          <li>&times; &nbsp;No hidden agendas</li>
+          <li>&times; &nbsp;No one-size-fits-all plans</li>
+        </ul>
+        <a class="btn">Book a Call</a>
+      </div>
+    </div>
+  </div>
+  <div style="height: 20px;"></div>
+</div>
+
+<div class="spacer"></div>
+
+</body>
+</html>
